@@ -1,0 +1,13 @@
+.item-type{
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0px;
+    
+}
+.item-type label{
+    width: 200px;
+}
+.item-type div{
+    display: flex;
+    justify-content: space-between;
+}
