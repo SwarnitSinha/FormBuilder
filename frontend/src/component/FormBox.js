@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Container from './fields/Container'
+import Field from './fields/field'
 const FormBox = (props)=>{
     console.log("this : ",props.data)
     
@@ -18,15 +19,21 @@ const FormBox = (props)=>{
                                 
                                 <div>
                                     {isField==1?
-                                        <div>
-                                            <p>This is a field</p>
-                                            <p>{form.fieldName}</p> 
-                                        </div>
+                                        <Field
+                                            fieldName = {form.fieldName}
+                                            fieldId = {form.fieldId}
+                                            entryName = {form.entryName}
+                                            plural = {form.plural} 
+                                    
+                                        />
                                         :
-                                        <div>
-                                            <p>This is a Container</p>
-                                            <p>{form.fieldName}</p> 
-                                        </div>
+                                        <Container
+                                            fieldName = {form.fieldName}
+                                            fieldId = {form.fieldId}
+                                            entryName = {form.entryName}
+                                            plural = {form.plural} 
+                                        
+                                        />
                                     }
                                     
                                 </div>
