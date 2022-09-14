@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cards{
+    background-color: rgb(203, 197, 197);
+}
+.single-field{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: row;
+    margin: 2px;
+    padding: 20px;
+}
+.single-field p{
+    margin: 0px;
+}
+.box{
+    width: 400px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.head{
+    color: black;
+    text-align: left;
+    margin: 35px 0px 15px 50px !important;
+}

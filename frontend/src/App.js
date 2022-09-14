@@ -1,8 +1,7 @@
 import './App.css';
 import React,{useState,useEffect} from 'react'
-import FormBuilder from './component/FormBuilder';
-import Modal from 'react-modal'
-import FormBox from './component/FormBox'
+import FormBuilder from './components/formBuilder/FormBuilder';
+import FormBox from './components/formBox/FormBox'
 
 
 function App() {

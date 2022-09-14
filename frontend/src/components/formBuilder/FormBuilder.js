@@ -9,7 +9,7 @@ import './FormBuilder.css'
 const FormBuilder = ({openModal,setOpenModal,formData})=>{
 
     const [type,setType] = new useState(0)
-    const [plural,setPlural] = new useState(1)
+    const [plural,setPlural] = new useState(0)
 
     const [fieldName,setFieldName] = new useState("")
     const [fieldId,setFieldId] = new useState("")
@@ -21,7 +21,8 @@ const FormBuilder = ({openModal,setOpenModal,formData})=>{
             itemType:type,
             fieldName : fieldName,
             fieldId:fieldId,
-            plural:plural
+            plural:plural,
+            entryName:entryName
         }
         formData(field)
         console.log(field)
@@ -97,20 +98,20 @@ const FormBuilder = ({openModal,setOpenModal,formData})=>{
                     <Form.Check 
                         type="checkbox" 
                         label="Yes" 
-                        checked = {plural===0}
-                        onClick = {()=>setPlural(0)}
+                        checked = {plural===1}
+                        onClick = {()=>setPlural(1)}
                     />
 
 
                     <Form.Check 
                         type="checkbox" 
                         label="No" 
-                        checked = {plural===1}
-                        onClick = {()=>setPlural(1)}
+                        checked = {plural===0}
+                        onClick = {()=>setPlural(0)}
                     />
                 </div>
             </div>
-            {plural===0 && 
+            {plural===1 && 
                 <div className='item-type'>
                     <label >Entry name: </label> 
                     
